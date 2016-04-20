@@ -8,12 +8,14 @@
  * 以一個星號和斜線最結尾
  */
 ```
-- if判斷式
+- 換行
 
 ```javascript
 /*
-* 1.如果是判斷同一個值 不可在做巢狀if
-* 2.在if後面都必須加上空格
+* 當一行註解超過80個字時必須換行
+* 且在下一行開頭加上四個空白
+* @param {string} foo This is a param with a description too long to fit in
+*     one line.
 */
 
 //正確
