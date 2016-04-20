@@ -11,12 +11,12 @@
 - 換行
 
 ```javascript
-/*
-* 當一行註解超過80個字時必須換行
-* 且在下一行開頭加上四個空白
-* @param {string} foo This is a param with a description too long to fit in
-*     one line.
-*/
+/**
+ * 當一行註解超過80個字時必須換行
+ * 且在下一行開頭加上四個空白
+ * @param {string} foo This is a param with a description too long to fit in
+ *     one line.
+ */
 ```
 - 放置位子
 
