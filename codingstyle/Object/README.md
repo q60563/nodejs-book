@@ -2,7 +2,6 @@
 - Array
 
 ```javascript
-//一律採用3個等號做嚴謹比較
 var a = [x1, x2, x3];
 var a2 = [x1, x2];
 var a3 = [x1];
