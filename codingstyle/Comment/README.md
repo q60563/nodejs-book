@@ -17,11 +17,4 @@
 * @param {string} foo This is a param with a description too long to fit in
 *     one line.
 */
-
-//正確
-if (val < 0){
-
-}
-
-//錯誤
 ```
