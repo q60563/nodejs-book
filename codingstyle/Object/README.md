@@ -11,15 +11,14 @@ var a4 = [];
 - Object
 
 ```javascript
-/**
- * 1.如果是判斷同一個值 不可在做巢狀if
- * 2.在if後面都必須加上空格
- */
+var o = {};
 
-//正確
-if (val < 0){
-
-}
+var o2 = {
+  a: 0,
+  b: 1,
+  c: 2,
+  'strange key': 3
+};
 
 //錯誤
 ```
