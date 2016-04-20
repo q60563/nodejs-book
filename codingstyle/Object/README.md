@@ -2,14 +2,25 @@
 - Array
 
 ```javascript
-var a = [x1, x2, x3];
-var a2 = [x1, x2];
-var a3 = [x1];
-var a4 = [];
+// bad
+const items = new Array();
+
+// good
+const items = [];
 ```
 - Object
 
 ```javascript
+// bad
+var o = new Object();
+
+var o2 = new Object();
+o2.a = 0;
+o2.b = 1;
+o2.c = 2;
+o2['strange key'] = 3;
+
+// good
 var o = {};
 
 var o2 = {
