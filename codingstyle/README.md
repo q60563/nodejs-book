@@ -40,7 +40,7 @@ ECMAScript 6 風格
 ECMAScript 5 相容性
 測試 效能 資源
 
-- 格式
+- [格式](./Specification)
   - 縮排與空格
   - 變數宣告
   - 單雙引號
@@ -53,6 +53,6 @@ ECMAScript 5 相容性
   - 檔案
   - 套件
 - [流程控制](./Compare)
-- 物件
-- 模組
-- 註解
+- [物件](./Object)
+- [模組](./Module)
+- [註解](./Comment)
