@@ -20,7 +20,7 @@
     
     - let
     ```javascript
-    'use strict'
+    'use strict'  //嚴謹模式
     var a = 5;
 
     if (a === 5) {
