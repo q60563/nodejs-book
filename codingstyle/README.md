@@ -3,15 +3,16 @@
 - 資料型態 
 - 參考
     ```javascript
-    var   (全域變數)
-    let   (區域變數)
-    const (區域不可變數)
+    不指定宣告方式 (全域變數)
+    var            (作用區域變數)
+    let            (區域變數)
+    const          (區域不可變數)
     ```
   - 範例
 
   ```javascript
   var a = 5;
-  var b = 10;  
+  var b = 10; 
 
   if (a === 5) {
     let a = 4; // The scope is inside the if-block
