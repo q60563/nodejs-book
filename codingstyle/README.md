@@ -9,7 +9,15 @@
     const (區域不可變數)
     ```
   - 範例
-
+    - var
+    ```javascript
+    function fun(){
+      console.log(a);  //undefined
+      var a = 19;
+      console.log(a);  //19
+    }
+    ```
+    
   ```javascript
   var a = 5;
   var b = 10; 
