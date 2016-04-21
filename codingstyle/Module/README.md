@@ -30,7 +30,7 @@ export function mult(a, b) {
 //app.js
 
 //逐一加載
-import { add, mult} form './module';
+import { add, mult } form './module';
 
 console.log('加法： ' + add(2, 3));
 console.log('乘法： ' + mult(1, 3));
