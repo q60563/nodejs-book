@@ -31,7 +31,16 @@
 
     console.log(a); // 5
     ```
-  
+    
+    - const
+    ```javascript
+    //在嚴謹模式下會顯示TypeError: Assignment to constant variable.錯誤
+    const a = 1;
+    a = 2;
+    console.log(a);  //1
+    ```
+    
+    
 
 - 字串 變數 陣列 物件
 - 函式 箭頭函式 建構子 解構子
