@@ -18,21 +18,19 @@
     }
     ```
     
-  ```javascript
-  var a = 5;
-  var b = 10; 
+    - let
+    ```javascript
+    'use strict'
+    var a = 5;
 
-  if (a === 5) {
-    let a = 4; // The scope is inside the if-block
-    var b = 1; // The scope is inside the function
+    if (a === 5) {
+      let a = 4; // The scope is inside the if-block
 
-    console.log(a);  // 4
-    console.log(b);  // 1
-  } 
+      console.log(a);  // 4
+    } 
 
-  console.log(a); // 5
-  console.log(b); // 1
-  ```
+    console.log(a); // 5
+    ```
   
 
 - 字串 變數 陣列 物件
