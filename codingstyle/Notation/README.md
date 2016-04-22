@@ -22,7 +22,7 @@ var jsonUserdata = { name: 'Danny', year:25 };
  * 常數(不會改變之數值)
  * 一律採用全大寫並將每個單字用底線做分隔
  */
-RESPBERRY_PI = 2
+RASPBERRY_PI = 2
 ```
 
 
