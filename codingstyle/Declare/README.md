@@ -39,7 +39,7 @@
   console.log(a); // 5
   ```
     
-  - const
+ - const
   ```javascript
   //在嚴謹模式下會顯示TypeError: Assignment to constant variable.錯誤
   const a = 1;
