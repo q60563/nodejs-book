@@ -1,7 +1,7 @@
 #設計規範(Coding Style)
 
 - 資料型態 
-- 參考
+- 宣告變數
     ```javascript
     //不使用var宣告的變數為全域變數
     var   (作用區域變數)
