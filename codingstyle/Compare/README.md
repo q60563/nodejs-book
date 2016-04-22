@@ -4,7 +4,7 @@
 ```javascript
 //一律採用3個等號做嚴謹比較
 if (i === 20){
-  console.log("相等");
+  console.log('相等');
 }
 ```
 - if判斷式
