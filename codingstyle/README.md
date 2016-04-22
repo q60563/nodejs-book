@@ -12,9 +12,9 @@
     - var
     ```javascript
     function getNumber(){
-      console.log(Number);  //undefined
-      var Number = 19;
-      console.log(a);  //19
+      console.log(number);  //undefined
+      var number = 19;
+      console.log(number);  //19
     }
     ```
     
