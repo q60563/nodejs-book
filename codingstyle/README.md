@@ -11,9 +11,9 @@
   - 範例
     - var
     ```javascript
-    function fun(){
-      console.log(a);  //undefined
-      var a = 19;
+    function getNumber(){
+      console.log(Number);  //undefined
+      var Number = 19;
       console.log(a);  //19
     }
     ```
