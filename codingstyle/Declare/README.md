@@ -29,13 +29,13 @@
   ```javascript
   'use strict'  //嚴謹模式
   var a = 5;
-
+  
   if (a === 5) {
     let a = 4; // The scope is inside the if-block
-
+  
     console.log(a);  // 4
   } 
-
+  
   console.log(a); // 5
   ```
     
