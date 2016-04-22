@@ -12,21 +12,21 @@ const items = [];
 
 ```javascript
 // 錯誤
-var o = new Object();
+var person = new Object();
 
-var o2 = new Object();
-o2.one = 0;
-o2.two = 1;
-o2.three = 2;
-o2['strange key'] = 3;
+var profile = new Object();
+profile.name = 'Alex';
+profile.age = 22;
+profile.email = 'a0987@gmail.com';
+profile['last name'] = 'Lin';
 
 // 正確
-var o = {};
+var person = {};
 
-var o2 = {
-  one: 0,
-  two: 1,
-  three: 2,
-  'strange key': 3
+var profile = {
+  name: 'Alex',
+  age: 22,
+  email: 'a0987@gmail.com',
+  'list name': 'Lin' 
 };
 ```
