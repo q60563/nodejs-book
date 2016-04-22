@@ -9,6 +9,15 @@
     const (區域不可變數)
     ```
   - 範例
+    - 不加var
+    ```javascript
+    function getNumber(){
+      number = 19;
+      console.log(number);  //19
+    }
+    console.log(number);  //19
+    ```
+
     - var
     ```javascript
     function getNumber(){
