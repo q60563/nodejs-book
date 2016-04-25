@@ -11,14 +11,14 @@
   - [Loading from node_modules Folders](#loading-from-node_modules-folders)
   - [Loading from the global folders](#loading-from-the-global-folders)
   - [The module Object](#the-module-object)
-    - [module.children](#module.children)
-    - [module.exports](#module.exports)
+    - [module.children](#modulechildren)
+    - [module.exports](#moduleexports)
       - [exports alias](#exports-alias)
-    - [module.filename](#module.filename)
-    - [module.id](#module.id)
-    - [module.loaded](#module.loaded)
-    - [module.parent](#module.parent)
-    - [module.require(id)](module.require(id))
+    - [module.filename](#modulefilename)
+    - [module.id](#moduleid)
+    - [module.loaded](#moduleloaded)
+    - [module.parent](#moduleparent)
+    - [module.require(id)](#modulerequireid)
    
 # Modules
 
