@@ -1,6 +1,6 @@
 # Modules
 - [Modules](./Modules)
-  - [Accessing the main module](./Accessing_the_main_module)
+  - [Accessing the main module](#Accessing_the_main_module)
   - [Addenda:Package Manager Tips](./Addenda:Package_Manager_Tips)
   - [All Together](./All_Together)
   - [Caching](./Caching)
@@ -18,4 +18,6 @@
     - module.id
     - module.loaded
     - module.parent
-    - module.require(id)  
+    - module.require(id)
+
+#Accessing the main module 
