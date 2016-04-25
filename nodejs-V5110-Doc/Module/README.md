@@ -4,21 +4,21 @@
   - [Addenda:Package Manager Tips](#addendapackage-manager-tips)
   - [All Together](#all-together)
   - [Caching](#caching)
-    - Module Caching Caveats 
+    - [Module Caching Caveats](#module-caching-caveats)
   - [Core Modules](#core-modules)
   - [Cycles](#cycles)
   - [File Modules](#file-modules)
   - [Loading from node_modules Folders](#loading-from-node_modules-folders)
   - [Loading from the global folders](#loading-from-the-global-folders)
   - [The module Object](#the-module-object)
-    - module.children
-    - module.exports
-      - exports alias
-    - module.filename
-    - module.id
-    - module.loaded
-    - module.parent
-    - module.require(id)
+    - [module.children](#module.children)
+    - [module.exports](#module.exports)
+      - [exports alias](#exports-alias)
+    - [module.filename](#module.filename)
+    - [module.id](#module.id)
+    - [module.loaded](#module.loaded)
+    - [module.parent](#module.parent)
+    - [module.require(id)](module.require(id))
    
 # Modules
 
@@ -180,3 +180,11 @@ NODE_MODULES_PATHS(START)
 # Loading from node_modules Folders
 # Loading from the global folders
 # The module Object
+### module.children
+### module.exports
+### exports alias
+### module.filename
+### module.id
+### module.loaded
+### module.parent
+### module.require(id)
