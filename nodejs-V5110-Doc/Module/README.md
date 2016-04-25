@@ -20,4 +20,8 @@
     - module.parent
     - module.require(id)
 
-#[Accessing the main module]("Accessing_the_main_module") 
+
+
+
+#Accessing_the_main_module
+Addenda:Package Manager Tips
