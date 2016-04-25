@@ -1,6 +1,6 @@
 # Modules
 - [Modules](./Modules)
-  - [Accessing the main module](#Accessing_the_main_module)
+  - [Accessing the main module](#Accessing the main module)
   - [Addenda:Package Manager Tips](./Addenda:Package_Manager_Tips)
   - [All Together](./All_Together)
   - [Caching](./Caching)
