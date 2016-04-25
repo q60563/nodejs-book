@@ -1,6 +1,6 @@
 # Modules
 - [Modules](./Modules)
-  - [Accessing the main module](#Accessing_the_main_module)
+  - [Accessing the main module](#Accessing)
   - [Addenda:Package Manager Tips](./Addenda:Package_Manager_Tips)
   - [All Together](./All_Together)
   - [Caching](./Caching)
@@ -39,5 +39,5 @@ Thus, even if a cycle is encountered, or if there are dependency conflicts, ever
 
 When the code in the foo package does require('bar'), it will get the version that is symlinked into /usr/lib/node/foo/1.2.3/node_modules/bar. Then, when the code in the bar package c
 
-#Accessing_the_main_module
+#Accessing
 Addenda:Package Manager Tips
