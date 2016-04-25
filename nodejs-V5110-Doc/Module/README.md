@@ -1,7 +1,7 @@
 # Modules
 - [Modules](./Modules)
-  - [Accessing the main module](#Accessing%20the%20main%20module)
-  - [Addenda:Package Manager Tips](./Addenda:Package_Manager_Tips)
+  - [Accessing the main module](#Accessing-the-main-module)
+  - [Addenda:Package Manager Tips](#Addenda:Package-Manager-Tips)
   - [All Together](./All_Together)
   - [Caching](./Caching)
     - Module Caching Caveats 
@@ -21,4 +21,4 @@
     - module.require(id)
 
 # Accessing the main module
-Addenda:Package Manager Tips
+# Addenda:Package Manager Tips
