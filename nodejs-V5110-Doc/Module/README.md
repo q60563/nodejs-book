@@ -1,4 +1,4 @@
-# Modules
+# Table of Contents
 - [Modules](#modules)
   - [Accessing the main module](#accessing-the-main-module)
   - [Addenda:Package Manager Tips](#addendapackage-manager-tips)
