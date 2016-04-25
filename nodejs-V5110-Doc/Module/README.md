@@ -176,11 +176,11 @@ NODE_MODULES_PATHS(START)
 
 # Core Modules
 
-Node.js has several modules compiled into the binary. These modules are described in greater detail elsewhere in this documentation.
+Node.js 有許多編譯成二進制的模組，這些模組在其他地方有更詳細的資料　。
 
-The core modules are defined within Node.js's source and are located in the lib/ folder.
+核心模組被定義於 Node.js 來源中，並且位於 lib/ 資料夾　。
 
-Core modules are always preferentially loaded if their identifier is passed to require(). For instance, require('http') will always return the built in HTTP module, even if there is a file by that name.
+如果核心模組的識別碼傳遞給 rqeuire() 將優先載入，例如， 即使已經擁有該名稱的文件 require('http') 還是會返回內建的 HTTP 模組　。
 
 # Cycles
 # File Modules
