@@ -1,16 +1,16 @@
 # Modules
 - [Modules](./Modules)
-  - [Accessing the main module](#Accessing-the-main-module)
-  - [Addenda:Package Manager Tips](#Addenda:Package-Manager-Tips)
-  - [All Together](./All_Together)
-  - [Caching](./Caching)
+  - [Accessing the main module](#accessing-the-main-module)
+  - [Addenda:Package Manager Tips](#addendapackage-manager-tips)
+  - [All Together](#all-together)
+  - [Caching](#caching)
     - Module Caching Caveats 
-  - [Core Modules](./Core_Modules)
-  - [Cycles](./Cycles)
+  - [Core Modules](#core-modules)
+  - [Cycles](#cycles)
   - [File Modules](./File_Modules)
-  - [Loading from node_modules Folders](./Loading_from_node_modules_Folders)
-  - [Loading from the global folders](./Loading_from_the_global_folders)
-  - [The module Object](./The_module_Object)
+  - [Loading from node_modules Folders](#loading-from-node-modules-folders)
+  - [Loading from the global folders](#loading-from-the-global-folders)
+  - [The module Object](#the-module-object)
     - module.children
     - module.exports
       - exports alias
@@ -22,3 +22,11 @@
 
 # Accessing the main module
 # Addenda:Package Manager Tips
+# All Together
+# Caching
+# Core Modules
+# Cycles
+# File Modules
+# Loading from node_modules Folders
+# Loading from the global folders
+# The module Object
