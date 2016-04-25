@@ -162,19 +162,26 @@ NODE_MODULES_PATHS(START)
 
 # Caching
 
-  Modules are cached after the first time they are loaded. This means (among other things) that every call to require('foo') will get exactly the same object returned, if it would resolve to the same file.
+當模組第一次被載入時將被緩存，這代表著如果解析的為同一個文件每次得到的回傳結果都會相同 。
 
-  Multiple calls to require('foo') may not cause the module code to be executed multiple times. This is an important feature. With it, "partially done" objects can be returned, thus allowing transitive dependencies to be loaded even when they would cause cycles.
+多次的呼叫 require('foo') 可能不會多次執行模組程式，這是一個重要的特性，有了它"部份完成"對象可以被返回可以說是加載時將會導致循環 。
 
-  If you want to have a module execute code multiple times, then export a function, and call that function.
+如果你想要有一個模組多次執行，那麼導出函式並且呼叫它 。
 
 #### Module Caching Caveats
 
-  Modules are cached based on their resolved filename. Since modules may resolve to a different filename based on the location of the calling module (loading from node_modules folders), it is not a guarantee that require('foo') will always return the exact same object, if it would resolve to different files.
+模組都是基於它們的文件名稱被快取，模組會生成很多不同的名稱是根據本地端模組(載入於 node_modules 資料夾)的名稱，使用 require('foo') 這個方法每次的回傳結果並不一定都會相同，因為它會讀取到不同的檔案 。
 
-  Additionally, on case-insensitive file systems or operating systems, different resolved filenames can point to the same file, but the cache will still treat them as different modules and will reload the file multiple times. For example, require('./foo') and require('./FOO') return two different objects, irrespective of whether or not ./foo and ./FOO are the same file.
+此外，作業系統的檔案不區分大小寫，即使是檔案名稱大小寫不同也能指向同一個檔案，但是快取仍然會視他們為不同的模組，並多次重新加載該模組。例如， require('./foo') 和 require('./FOO') 雖然會指向同一個模組但是仍然會判定為不同物件　。
 
 # Core Modules
+
+Node.js has several modules compiled into the binary. These modules are described in greater detail elsewhere in this documentation.
+
+The core modules are defined within Node.js's source and are located in the lib/ folder.
+
+Core modules are always preferentially loaded if their identifier is passed to require(). For instance, require('http') will always return the built in HTTP module, even if there is a file by that name.
+
 # Cycles
 # File Modules
 # Loading from node_modules Folders
