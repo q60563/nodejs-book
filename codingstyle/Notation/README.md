@@ -17,7 +17,7 @@
 var intYear = 25;
 var strName = 'Danny';
 var arrPool = [ 20, 14, 23, 22 ];
-var jsonUserdata = { name: 'Danny', year:25 };
+var jsonUserData = { name: 'Danny', year:25 };
 /**
  * 常數(不會改變之數值)
  * 一律採用全大寫並將每個單字用底線做分隔
