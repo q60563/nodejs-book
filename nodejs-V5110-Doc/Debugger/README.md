@@ -1,14 +1,14 @@
 # Table of Contents
 
-- Debugger
-  - Watchers
-  - Commands reference
-    - Stepping
-    - Breakpoints
-    - Info
-    - Execution control
-    - Various
-  - Advanced Usage
+- [Debugger](#debugger)
+  - [Watchers](#watchers)
+  - [Commands reference](#commands-reference)
+    - [Stepping](#stepping)
+    - [Breakpoints](#breakpoints)
+    - [Info](#info)
+    - [Execution control](#execution-control)
+    - [Various](#various)
+  - [Advanced Usage](#advanced-usage)
 
 
 
