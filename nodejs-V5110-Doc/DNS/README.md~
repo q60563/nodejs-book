@@ -33,12 +33,9 @@
 # dns.lookup(hostname[, options], callback)
 將網域名稱解析為A(IPv4)或AAAA(IPv6)
 `options`包含3個參數(family, hints, all)
-
-```
 `family`-只能為整數4或6,沒提供的話IPv4,IPv6都是有效的。
 `hints`-如果提供,必須是一個或多個支持的`getaddrinfo`標示。
 `all`-Boolean,如果true,將以陣列的方式回傳所有解析的IP,false的話只會回傳一個IP,預設為false。
-```
 
 ==
 
