@@ -27,6 +27,7 @@
 # DNS
 `var dns = require("dns")`
 # dns.getServers()
+以字串的方式回傳當前DNS的IP。
 
 ==
 
