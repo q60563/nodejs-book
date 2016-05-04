@@ -81,7 +81,7 @@
     - [Support for weak or compromised algorithms](#support-for-weak-or-compromised-algorithms)
 
 # Crypto
-`Crytpo`模組提供了包含OpenSSL's hash，HMAC，cipher，decipher，sign和verify等的加密的功能
+`Crytpo`模組提供了包含OpenSSL's hash、HMAC、cipher、decipher、sign和verify等的加密的功能
 用`require('crypto')`來載入這個模組
 ```javascript
 const crypto = require('crypto');
@@ -206,7 +206,7 @@ console.log(encrypted);
 
 ### cipher.final([output_encoding])
 return剩餘的解密內容
-如果`output_encoding`參數是`'binary'`，`'base64'`或`'hex'`中的一種，則返回一個字串
+如果`output_encoding`參數是`'binary'`、`'base64'`或`'hex'`中的一種，則返回一個字串
 如果沒有提供`output_encoding`，則返回一個Buffer
 
 一旦使用了`cipher.final()`方法後，`Cipher`物件就不能再用於加密
@@ -229,10 +229,10 @@ return剩餘的解密內容
 `cipher.setAutoPadding()`方法必須在cipher.final()之後使用
 
 ### cipher.update(data[, input_encoding][, output_encoding])
-用在更新資料`(data)`的cipher，如果有`input_encoding`的參數，那必須是`'utf8'`，`'ascii'`或`'binary'`
+用在更新資料`(data)`的cipher，如果有`input_encoding`的參數，那必須是`'utf8'`、`'ascii'`或`'binary'`
 資料`(data)`參數須是一個指定編碼格式的字串，如果沒有`input_encoding`參數，資料`(data)`會是一個Buffer然後`input_encoding`會被忽略
 
-`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`，`'base64'`或`'hex'`
+`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`、`'base64'`或`'hex'`
 如果`output_encoding`被指定了，則return指定編碼的相符字串，否則return一個Buffer
 
 `cipher.update()`方法可以在cipher.final()使用前多次呼叫，如果在cipher.final()後使用會丟出錯誤
@@ -290,7 +290,7 @@ console.log(decrypted);
 
 ### decipher.final([output_encoding])
 return剩餘的解密內容
-如果`output_encoding`參數是`'binary'`，`'base64'`或`'hex'`中的一種，則返回一個字串
+如果`output_encoding`參數是`'binary'`、`'base64'`或`'hex'`中的一種，則返回一個字串
 如果沒有提供`output_encoding`，則返回一個Buffer
 
 一旦使用了`decipher.final()`方法後，`Decipher`物件就不能再用於加密
@@ -312,10 +312,10 @@ return剩餘的解密內容
 `decipher.setAutoPadding()`方法必須在decipher.update()方法之前使用
 
 ### decipher.update(data[, input_encoding][, output_encoding])
-用在更新資料`(data)`的decipher，如果有`input_encoding`的參數，那必須是`'binary'`，`'base64'`或`'hex'`
+用在更新資料`(data)`的decipher，如果有`input_encoding`的參數，那必須是`'binary'`、`'base64'`或`'hex'`
 資料`(data)`參數須是一個指定編碼格式的字串，如果沒有`input_encoding`參數，資料會是一個Buffer然後`input_encoding`會被忽略
 
-`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`，`'ascii'`或`'utf8'`
+`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`、`'ascii'`或`'utf8'`
 如果`output_encoding`被指定了，則return指定編碼的相符字串，否則return一個Buffer
 
 `decipher.update()`方法可以在decipher.final()使用前多次呼叫，如果在decipher.final()後使用會丟出錯誤
