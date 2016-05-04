@@ -81,8 +81,8 @@
     - [Support for weak or compromised algorithms](#support-for-weak-or-compromised-algorithms)
 
 # Crypto
-Crytpo模組提供了包含OpenSSL's hash，HMAC，cipher，decipher，sign和verify等的加密的功能
-用require('crypto')來載入這個模組
+`Crytpo`模組提供了包含OpenSSL's hash，HMAC，cipher，decipher，sign和verify等的加密的功能
+用`require('crypto')`來載入這個模組
 ```javascript
 const crypto = require('crypto');
 
@@ -96,7 +96,7 @@ console.log(hash);
 ```
 
 ## Determining if crypto support is unavailable
-如果沒有載入crypto的模組支援的話Node.js是可以建立的，但在有些時候使用require('crypto')則會得到錯誤訊息
+如果沒有載入`crypto`的模組支援的話Node.js是可以建立的，但在有些時候使用`require('crypto')`則會得到錯誤訊息
 ```javascript
 var crypto;
 try {
@@ -108,11 +108,12 @@ try {
 
 ## Class: Certificate
 SPKAC最初是由Netscape實現了一個證書簽名請求機制，目前正式指定為HTML5的keygen元素的一部分
-crypto模組提供了certificate類別和SPKAC數據的工作，最常見的用法是生成HTML5元素<keygen>的輸出處理
+
+`crypto`模組提供了`Certificate`類別和SPKAC數據的工作，最常見的用法是生成HTML5元素`<keygen>`的輸出處理
 Node.js使用OpenSSL的SPKAC執行
 
 ### new crypto.Certificate()
-要實例Certificate類別可以用關鍵字new或是直接呼叫crypto.Certificate()來當成一個函數
+要實例`Certificate`類別可以用關鍵字`new`或是直接呼叫`crypto.Certificate()`來當成一個函數
 ```javascript
 const crypto = require('crypto');
 
@@ -121,8 +122,8 @@ const cert2 = crypto.Certificate();
 ```
 
 ### certificate.exportChallenge(spkac)
-SPKAC的資料結構包含了一個公開的key和challenge
-certificate.exportChallenge()可以以一個Node.js Buffer的形式return chanllenge的部件
+`SPKAC`的資料結構包含了一個公開的key和challenge
+`certificate.exportChallenge()`可以以一個Node.js Buffer的形式return chanllenge的部件
 SPKAC參數可以是一個字串或Buffer
 ```javascript
 const cert = require('crypto').Certificate();
@@ -133,9 +134,9 @@ console.log(challenge.toString('utf8'));
 ```
 
 ### certificate.exportPublicKey(spkac)
-SPKAC的資料結構包含了一個公開的key和chanllenge
-certificate.exportPublicKey()可以以一個Node.js Buffer的形式return 公開的key
-SPKAC參數可以是一個字串或Buffer
+`SPKAC`的資料結構包含了一個公開的key和chanllenge
+`certificate.exportPublicKey()`可以以一個Node.js Buffer的形式return 公開的key
+`SPKAC`參數可以是一個字串或Buffer
 ```javascript
 const cert = require('crypto').Certificate();
 const spkac = getSpkacSomehow();
@@ -145,8 +146,8 @@ console.log(publicKey);
 ```
 
 ### certificate.verifySpkac(spkac)
-如果SPKAC的資料結構式有效的會return true否則會return false
-SPKAC參數必須是一個Node.js的Buffer
+如果`SPKAC`的資料結構式有效的會return `true`否則會return `false`
+`SPKAC`參數必須是一個Node.js的Buffer
 ```javascript
 const cert = require('crypto').Certificate();
 const spkac = getSpkacSomehow();
@@ -155,12 +156,12 @@ console.log(cert.verifySpkac(new Buffer(spkac)));
 ```
 
 ## Class: Cipher
-Cipher類別常用於對資料進行加密，這個類別主要有兩個使用方式：
+`Cipher`類別常用於對資料進行加密，這個類別主要有兩個使用方式：
 -包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
 -用cipher.update()或cipher.final()方法產生加密資料
-crypto.createCipher() 或 crypto.createCipheriv()方法常用於創Cipher的實例，Cipher的物件不能使用new來創建
+crypto.createCipher() 或 crypto.createCipheriv()方法常用於創`Cipher`的實例，`Cipher`的物件不能使用`new`來創建
 
-例：將Cipher物件封裝成stream：
+例：將`Cipher`物件封裝成stream：
 ```javascript
 const crypto = require('crypto');
 const cipher = crypto.createCipher('aes192', 'a password');
@@ -180,7 +181,7 @@ cipher.write('some clear text data');
 cipher.end();
 ```
 
-例：使用Cipher和piped stream：
+例：使用`Cipher`和piped stream：
 ```javascript
 const crypto = require('crypto');
 const fs = require('fs');
@@ -205,44 +206,44 @@ console.log(encrypted);
 
 ### cipher.final([output_encoding])
 return剩餘的解密內容
-如果output_encoding參數是'binary'，'base64'或'hex'中的一種，則返回一個字串
-如果沒有提供output_encoding，則返回一個Buffer
+如果`output_encoding`參數是`'binary'`，`'base64'`或`'hex'`中的一種，則返回一個字串
+如果沒有提供`output_encoding`，則返回一個Buffer
 
-一旦使用了cipher.final()方法後，Cipher物件就不能再用於加密
-如果多次使用cipher.final()將會丟回錯誤
+一旦使用了`cipher.final()`方法後，`Cipher`物件就不能再用於加密
+如果多次使用`cipher.final()`將會丟回錯誤
 
 ### cipher.setAAD(buffer)
-當使用加密認證模式(目前只支援GCM)時，cipher.setAAD()方法用於輸入額外認證資料(AAD)參數的值
+當使用加密認證模式(目前只支援`GCM`)時，`cipher.setAAD()`方法用於輸入額外認證資料(AAD)參數的值
 
 ### cipher.getAuthTag()
-當使用加密認證模式(目前只支援GCM)時，cipher.getAuthTag()方法會return一個包含認證標籤的buffer
+當使用加密認證模式(目前只支援`GCM`)時，`cipher.getAuthTag()`方法會return一個包含認證標籤的buffer
 
-cipher.getAuthTag()方法只能在cipher.final()方法後使用
+`cipher.getAuthTag()`方法只能在cipher.final()方法後使用
 
 ### cipher.setAutoPadding(auto_padding=true)
-當使用區塊加密演算法時，Cipher類別會自動填充輸入的資料到適當的區塊大小，如果要禁用預設填充可以用cipher.setAutoPadding(false)
+當使用區塊加密演算法時，`Cipher`類別會自動填充輸入的資料到適當的區塊大小，如果要禁用預設填充可以用`cipher.setAutoPadding(false)`
 
-當auto_padding的值是false時，輸入的資料長度必須是cipher區塊大小的倍數，否則cipher.final()會丟回錯誤
+當`auto_padding`的值是`false`時，輸入的資料長度必須是cipher區塊大小的倍數，否則cipher.final()會丟回錯誤
 禁用自動填充是個有用的非標準填充，例如用0x0替代PKCS填充
 
-cipher.setAutoPadding()方法必須在cipher.final()之後使用
+`cipher.setAutoPadding()`方法必須在cipher.final()之後使用
 
 ### cipher.update(data[, input_encoding][, output_encoding])
-用在更新資料的cipher，如果有input_encoding的參數，那必須是'utf8'，'ascii'或'binary'
-資料參數須是一個指定編碼格式的字串，如果沒有input_encoding參數，資料會是一個Buffer然後input_encoding會被忽略
+用在更新資料`(data)`的cipher，如果有`input_encoding`的參數，那必須是`'utf8'`，`'ascii'`或`'binary'`
+資料`(data)`參數須是一個指定編碼格式的字串，如果沒有`input_encoding`參數，資料`(data)`會是一個Buffer然後`input_encoding`會被忽略
 
-output_encoding參數制定了加密資料輸出的編碼格式，可以是'binary'，'base64'或'hex'
-如果output_encoding被指定了，則return指定編碼的相符字串，否則return一個Buffer
+`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`，`'base64'`或`'hex'`
+如果`output_encoding`被指定了，則return指定編碼的相符字串，否則return一個Buffer
 
-cipher.update()方法可以在cipher.final()使用前多次呼叫，如果在cipher.final()後使用會丟出錯誤
+`cipher.update()`方法可以在cipher.final()使用前多次呼叫，如果在cipher.final()後使用會丟出錯誤
 
 ## Class: Decipher
-Cipher類別常用於對資料進行解密，這個類別主要有兩個使用方式：
+`Deipher`類別常用於對資料進行解密，這個類別主要有兩個使用方式：
 -包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
 -用decipher.update()或decipher.final()方法產生加密資料
-crypto.createDecipher() 或 crypto.createDecipheriv()方法常用於創Decipher的實例，Decipher的物件不能使用new來創建
+crypto.createDecipher() 或 crypto.createDecipheriv()方法常用於創`Decipher`的實例，`Decipher`的物件不能使用`new`來創建
 
-例：用Decipher物件封裝成stream：
+例：用`Decipher`物件封裝成stream：
 ```javascript
 const crypto = require('crypto');
 const decipher = crypto.createDecipher('aes192', 'a password');
@@ -263,7 +264,7 @@ decipher.write(encrypted, 'hex');
 decipher.end();
 ```
 
-例：使用Decipher和piped stream：
+例：使用`Decipher`和piped stream：
 ```javascript
 const crypto = require('crypto');
 const fs = require('fs');
@@ -289,35 +290,35 @@ console.log(decrypted);
 
 ### decipher.final([output_encoding])
 return剩餘的解密內容
-如果output_encoding參數是'binary'，'base64'或'hex'中的一種，則返回一個字串
-如果沒有提供output_encoding，則返回一個Buffer
+如果`output_encoding`參數是`'binary'`，`'base64'`或`'hex'`中的一種，則返回一個字串
+如果沒有提供`output_encoding`，則返回一個Buffer
 
-一旦使用了decipher.final()方法後，Decipher物件就不能再用於加密
-如果多次使用decipher.final()將會丟回錯誤
+一旦使用了`decipher.final()`方法後，`Decipher`物件就不能再用於加密
+如果多次使用`decipher.final()`將會丟回錯誤
 
 ### decipher.setAAD(buffer)
-當使用加密認證模式(目前只支援GCM)時，decipher.setAAD()方法用於輸入額外認證資料(AAD)參數的值
+當使用加密認證模式(目前只支援`GCM`)時，`decipher.setAAD()`方法用於輸入額外認證資料(AAD)參數的值
 
 ### decipher.setAuthTag(buffer)
-當使用加密認證模式(目前只支援GCM)時，decipher.getAuthTag()方法被用來傳遞接收到的認證標籤
+當使用加密認證模式(目前只支援`GCM`)時，`decipher.getAuthTag()`方法被用來傳遞接收到的認證標籤
 如果沒有認證標籤，或加密內容被篡改，decipher.final()會被回傳，表示加密內容由於認證失敗而該放棄
 
 ### decipher.setAutoPadding(auto_padding=true)
-當資料加密沒有使用標準的區塊填充，使用decipher.setAutoPadding(false)方法可以禁用自動填充
+當資料加密沒有使用標準的區塊填充，使用`decipher.setAutoPadding(false)`方法可以禁用自動填充
 以防止decipher.final()方法檢查和移除填充
 
 只有在輸入的資料長度為cipher區塊大小的倍數時才能關掉自動填充功能
 
-decipher.setAutoPadding()方法必須在decipher.update()方法之前使用
+`decipher.setAutoPadding()`方法必須在decipher.update()方法之前使用
 
 ### decipher.update(data[, input_encoding][, output_encoding])
-用在更新資料的decipher，如果有input_encoding的參數，那必須是'binary'，'base64'或'hex'
-資料參數須是一個指定編碼格式的字串，如果沒有input_encoding參數，資料會是一個Buffer然後input_encoding會被忽略
+用在更新資料`(data)`的decipher，如果有`input_encoding`的參數，那必須是`'binary'`，`'base64'`或`'hex'`
+資料`(data)`參數須是一個指定編碼格式的字串，如果沒有`input_encoding`參數，資料會是一個Buffer然後`input_encoding`會被忽略
 
-output_encoding參數制定了加密資料輸出的編碼格式，可以是'binary'，'ascii'或'utf8'
-如果output_encoding被指定了，則return指定編碼的相符字串，否則return一個Buffer
+`output_encoding`參數制定了加密資料輸出的編碼格式，可以是`'binary'`，`'ascii'`或`'utf8'`
+如果`output_encoding`被指定了，則return指定編碼的相符字串，否則return一個Buffer
 
-decipher.update()方法可以在decipher.final()使用前多次呼叫，如果在decipher.final()後使用會丟出錯誤
+`decipher.update()`方法可以在decipher.final()使用前多次呼叫，如果在decipher.final()後使用會丟出錯誤
 
 ## Class: DiffieHellman
 ### diffieHellman.computeSecret(other_public_key[, input_encoding][, output_encoding])
