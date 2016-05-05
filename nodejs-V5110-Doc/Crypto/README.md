@@ -157,8 +157,8 @@ console.log(cert.verifySpkac(new Buffer(spkac)));
 
 ## Class: Cipher
 `Cipher`類別常用於對資料進行加密，這個類別主要有兩個使用方式：
--包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
--用cipher.update()或cipher.final()方法產生加密資料
+- 包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
+- 用cipher.update()或cipher.final()方法產生加密資料
 crypto.createCipher() 或 crypto.createCipheriv()方法常用於創`Cipher`的實例，`Cipher`的物件不能使用`new`來創建
 
 例：將`Cipher`物件封裝成stream：
@@ -239,8 +239,8 @@ return剩餘的解密內容
 
 ## Class: Decipher
 `Deipher`類別常用於對資料進行解密，這個類別主要有兩個使用方式：
--包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
--用decipher.update()或decipher.final()方法產生加密資料
+- 包裝成一個可以讀寫的stream，能寫入未加密資料或讀出加密資料
+- 用decipher.update()或decipher.final()方法產生加密資料
 crypto.createDecipher() 或 crypto.createDecipheriv()方法常用於創`Decipher`的實例，`Decipher`的物件不能使用`new`來創建
 
 例：用`Decipher`物件封裝成stream：
