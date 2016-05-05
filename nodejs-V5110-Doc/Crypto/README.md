@@ -107,10 +107,10 @@ try {
 ```
 
 ## Class: Certificate
-SPKAC最初是由Netscape實現了一個證書簽名請求機制，目前正式指定為HTML5的keygen元素的一部分
+SPKAC最初是由Netscape實現了一個證書簽名請求機制，目前正式指定為[HTML5的keygen元素](http://www.w3.org/TR/html5/forms.html#the-keygen-element)的一部分
 
 `crypto`模組提供了`Certificate`類別和SPKAC數據的工作，最常見的用法是生成HTML5元素`<keygen>`的輸出處理
-Node.js使用OpenSSL的SPKAC執行
+Node.js使用[OpenSSL的SPKAC](https://www.openssl.org/docs/apps/spkac.html)執行
 
 ### new crypto.Certificate()
 要實例`Certificate`類別可以用關鍵字`new`或是直接呼叫`crypto.Certificate()`來當成一個函數
