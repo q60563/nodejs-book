@@ -60,17 +60,24 @@ dns.lookupService("8.8.8.8", 22, function(err, hostname, service) {
 ==
 
 # dns.resolve(hostname[, rrtype], callback)
-- 網域名稱轉IP
-- rrtype:
- - 'A':IPv4,預設.
- - 'AAAA':IPv6.
- - 'MX':郵件交換紀錄
- - 'TXT':text紀錄
- - 'SRV':SRV紀錄
- - 'PTR':用來反向IP尋找
- - 'NS':
- - 'CNAME':
- - 'SOA': 
+- 網域名稱轉IP  
+- rrtype:  
+ - 'A':IPv4,預設.  
+ - 'AAAA':IPv6.  
+ - 'MX':郵件交換紀錄.  
+ - 'TXT':text紀錄.  
+ - 'SRV':SRV紀錄.  
+ - 'PTR':用來IP找網域名稱.  
+ - 'NS':域名服務器紀錄.  
+ - 'CNAME':別名紀錄.  
+ - 'SOA': 查詢權威紀錄.  
+   - nsname    
+   - hostmaster  
+   - serial  
+   - refresh  
+   - retry   
+   - expire  
+   - minttl   
 ```javascript
 var dns = require('dns')
 dns.resolve('www.google.com.tw', rrtype = 'A', function(err, addresses) {
