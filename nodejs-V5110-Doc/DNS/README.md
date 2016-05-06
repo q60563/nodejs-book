@@ -60,6 +60,35 @@ dns.lookupService("8.8.8.8", 22, function(err, hostname, service) {
 ==
 
 # dns.resolve(hostname[, rrtype], callback)
+- 網域名稱轉IP  
+- rrtype:  
+ - 'A':IPv4,預設.  
+ - 'AAAA':IPv6.  
+ - 'MX':郵件交換紀錄.  
+ - 'TXT':text紀錄.  
+ - 'SRV':SRV紀錄.  
+ - 'PTR':用來IP找網域名稱.  
+ - 'NS':域名服務器紀錄.  
+ - 'CNAME':別名紀錄.  
+ - 'SOA': 查詢權威紀錄.  
+   - nsname    
+   - hostmaster  
+   - serial  
+   - refresh  
+   - retry   
+   - expire  
+   - minttl   
+```javascript
+var dns = require('dns')
+dns.resolve('www.google.com.tw', rrtype = 'A', function(err, addresses) {
+	console.log('IP：%s',JSON.stringify(addresses));
+})
+#結果：IP：["203.211.0.44","203.211.0.50","203.211.0.30","203.211.0.40","203.211.0.49","203.211.0.59","203.211.0.24","203.211.0.34","203.211.0.39","203.211.0.20","203.211.0.35","203.211.0.45","203.211.0.54","203.211.0.29","203.211.0.25","203.211.0.55"]
+
+```
+
+==
+
 # dns.resolve4(hostname, callback)
 # dns.resolve6(hostname, callback)
 # dns.resolveCname(hostname, callback)
