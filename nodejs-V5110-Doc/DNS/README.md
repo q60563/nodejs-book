@@ -25,7 +25,9 @@
 
 
 # DNS
-`var dns = require("dns")`
+```javascript
+var dns = require("dns")
+```
 # dns.getServers()
 - 以字串的方式回傳當前DNS的IP。
 
@@ -47,7 +49,7 @@
 
 # dns.lookupService(address, port, callback)
 - 將傳入的IP和PORT號轉成網域名稱跟服務。
-```sh
+```javascript
 var dns = require('dns')
 dns.lookupService("8.8.8.8", 22, function(err, hostname, service) {
 	console.log('主機：%s，服務：%s',hostname,service);
