@@ -62,7 +62,7 @@ dns.lookupService("8.8.8.8", 22, function(err, hostname, service) {
 # dns.resolve(hostname[, rrtype], callback)
 - 網域名稱轉IP  
 - rrtype:  
- - A:IPv4,預設.   
+ - A:IPv4,預設.  
  - AAAA:IPv6.  
  - MX:郵件交換紀錄.  
  - TXT:text紀錄.  
